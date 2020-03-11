@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
+import { UserService } from '../auth/user.service';
 
 @Component({
   selector: 'app-menu',
@@ -16,6 +17,13 @@ export class MenuComponent {
       shareReplay()
     );
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(private breakpointObserver: BreakpointObserver,private authuser: UserService) {}
+
+  logout() {
+    
+    this.authuser.logout();
+    
+  
+}
 
 }

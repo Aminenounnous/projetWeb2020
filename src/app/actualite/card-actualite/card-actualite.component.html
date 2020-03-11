@@ -1,0 +1,17 @@
+<mat-card class="card">
+    <mat-card-content>
+        <div class="Titre">{{actu.title}}</div>
+        <br />
+        <p>
+         {{actu.contenu}}
+        </p>
+        <div class="date">{{actu.date}}</div> 
+
+    </mat-card-content>
+    <mat-card-actions >
+      <button mat-button [routerLink]="['/updateActu', actu.id]" >Modifier</button>
+      <button mat-button (click)="delActu()">Supprimer</button>
+    </mat-card-actions>
+  </mat-card>
+
+  

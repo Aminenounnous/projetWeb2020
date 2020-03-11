@@ -1,0 +1,23 @@
+<div class="Add_actu">
+<form [formGroup]="ActuForm"  >
+  <div class="errormsg" *ngIf="authError">
+    <div class="col-12 alert alert-danger">{{ authError?.message }}</div>
+  </div>
+    <mat-form-field appearance="fill">
+      <mat-label>Le titre</mat-label>
+      <input matInput formControlName="title" >
+    </mat-form-field>
+    <br>
+    <mat-form-field   appearance="fill">
+        <mat-label>Contenu</mat-label>
+        <textarea matInput formControlName="contenu" ></textarea>
+      </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+        <mat-label>La date</mat-label>
+        <input matInput formControlName="date">
+      </mat-form-field>
+    <div class="button" ><a  mat-raised-button  [disabled]="!ActuForm.valid" (click)="AddActu()"  >Ajouter actualité</a></div>
+    
+</form>
+</div>

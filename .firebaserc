@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "portailweb-a3c33": {
+      "hosting": {
+        "Projet": [
+          "portailweb-a3c33"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.button{
+    margin-left: auto;
+    
+}
+.card {
+    max-width: 400px;
+    position: fixed;
+    top: 20%;
+    left: 40%;
+    padding-bottom: 20px;
+}  
+  .cardimage {
+    background-size: cover;
+  }

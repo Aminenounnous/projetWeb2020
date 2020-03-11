@@ -1,0 +1,40 @@
+  <!--<table mat-table [dataSource]="user" dat class="mat-elevation-z8">
+
+    
+    <ng-container matColumnDef="prenom">
+      <th mat-header-cell *matHeaderCellDef> Prénom </th>
+      <td mat-cell *matCellDef="let element"> {{user.prenom}} </td>
+    </ng-container>
+  
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Nom </th>
+      <td mat-cell *matCellDef="let element"> {{user.nom}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="role">
+      <th mat-header-cell *matHeaderCellDef> role </th>
+      <td mat-cell *matCellDef="let element"> {{user.role}} </td>
+    </ng-container>
+  
+
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef> Email </th>
+      <td mat-cell *matCellDef="let element"> {{user.email}} </td>
+    </ng-container>
+
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr *ngFor="let user of users;" [routerLink]="['/user-profile']">
+      <td>{{user.prenom}}</td>
+      <td>{{user.nom}}</td>
+      <td>{{user.role}}</td>
+      <td>{{user.email}}</td>
+    </tr>
+  </table>-->
+
+<div class="container" *ngFor="let user of users" >
+  
+    <app-user-card [user]="user" ></app-user-card>
+  
+</div>

@@ -1,0 +1,10 @@
+.button{
+  margin-left: auto;
+  
+}
+ .container {
+    display: inline-block;
+    
+    top: 20%;
+    left: 50%;
+  }

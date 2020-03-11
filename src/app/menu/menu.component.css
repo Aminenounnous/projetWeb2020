@@ -1,7 +1,10 @@
 .sidenav-container {
   height: 100%;
 }
-
+.button{
+    margin-left: auto;
+    
+}
 .sidenav {
   width: 200px;
 }

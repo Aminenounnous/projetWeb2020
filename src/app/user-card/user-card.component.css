@@ -1,0 +1,25 @@
+
+
+.card {
+    max-width: 400px;
+    margin: auto;
+    margin: 8px;
+  }
+  
+  .nom {
+  text-align: center;
+  font-size: 36px;
+
+  }
+  .role {
+    text-align: center;
+    font-size: 24px;
+  
+    }
+
+  .info{
+    text-align: left;
+    font-size: 18px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }

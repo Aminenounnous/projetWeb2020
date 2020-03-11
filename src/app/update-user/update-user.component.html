@@ -1,0 +1,45 @@
+<div class="UpdateUser">
+    <form [formGroup]="updateuserForm" (ngSubmit)="onSubmit()"  novalidate >
+
+        <mat-form-field appearance="fill">
+          <mat-label>Nom</mat-label>
+          <input matInput formControlName="nom" >
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Prénom</mat-label>
+            <input matInput formControlName="prenom">
+          </mat-form-field>
+          <br>
+          <mat-form-field appearance="fill">
+            <mat-label>Émail</mat-label>
+            <input matInput formControlName="email" >
+          </mat-form-field>
+          <br>
+          <mat-form-field appearance="fill">
+            <mat-label>Numéro</mat-label>
+            <input matInput formControlName="numero" >
+          </mat-form-field>
+          <br>
+
+          <mat-form-field> 
+            <mat-label>rôle</mat-label>
+            <mat-select formControlName="role" [(value)]="role">
+                <mat-option value="client"> Client</mat-option>
+                <mat-option value="employe"> Employé</mat-option>
+                <mat-option value="admin"> Admin</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Url</mat-label>
+            <input matInput formControlName="Url" >
+          </mat-form-field>
+          <br>
+    
+          
+        <div class="button"  ><a  mat-raised-button  (click)="update()" [disabled]="!updateuserForm.valid" >Sauvegarder les modifications</a></div>
+        
+    </form>
+</div>
+    
