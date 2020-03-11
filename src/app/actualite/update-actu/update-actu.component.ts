@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { GetActualiteService } from '../get-actualite.service';
-import { timingSafeEqual } from 'crypto';
+
 
 @Component({
   selector: 'app-update-actu',

@@ -13,8 +13,9 @@ import { UserService } from '../auth/user.service';
 })
 
 export class LoginComponent implements OnInit {
-
+  
   authError: any;
+  userEmail:string;
   loginForm: FormGroup;
   hide = true;
   user: LoginModel = new LoginModel();
@@ -39,9 +40,10 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    this.authuser.login(this.loginForm .value.email, this.loginForm.value.password);
+    this.authuser.login(this.loginForm .value.email, this.loginForm.value.password).then(
+      data=> this.userEmail = data.user.email);
     
-    console.log(this.authuser.getEmailUser());
+   console.log(this.userEmail);
     
   }
   

@@ -11,7 +11,7 @@ import { FirebaseAuth } from '@angular/fire';
 export class UserService {
   private eventAuthError = new BehaviorSubject<string>("");
   eventAuthError$ = this.eventAuthError.asObservable();
-
+  userEmail:string;
   email: string;
   user :any;
   
@@ -21,19 +21,25 @@ export class UserService {
     return this.Auth.authState;
   }
 
-  login( email: string, password: string) {
-    this.Auth.auth.signInWithEmailAndPassword(email, password)
+  login( email: string, password: string): Promise<any> {
+    return this.Auth.auth.signInWithEmailAndPassword(email, password)
+    //.then(data => this.userEmail=data.user.email)
+    
       .catch(error => {
         this.eventAuthError.next(error);
-      })
-      
+      });
+        
   }
   getEmailUser(){
-   
+      
+      
+      return this.userEmail;
+    
   }
   
   logout() {
     return this.Auth.auth.signOut();
   }
+ 
   
 }

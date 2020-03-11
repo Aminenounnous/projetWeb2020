@@ -39,6 +39,7 @@ import { Page404Component } from './page404/page404.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
 import { DialogMessageComponent } from './dialog-message/dialog-message.component';
 import { UpdateActuComponent } from './actualite/update-actu/update-actu.component';
+import { AcceuilComponent } from './acceuil/acceuil.component';
 
 
 @NgModule({
@@ -56,7 +57,8 @@ import { UpdateActuComponent } from './actualite/update-actu/update-actu.compone
     Page404Component,
     UpdateUserComponent,
     DialogMessageComponent,
-    UpdateActuComponent
+    UpdateActuComponent,
+    AcceuilComponent
   ],
   imports: [
     BrowserModule,

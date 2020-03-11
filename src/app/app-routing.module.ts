@@ -12,13 +12,14 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { Page404Component } from './page404/page404.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
 import { UpdateActuComponent } from './actualite/update-actu/update-actu.component';
+import { AcceuilComponent } from './acceuil/acceuil.component';
 
 
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['login']);
 
 export const routes: Routes = [
    
-    { path: '404', component: Page404Component },
+    { path: '', component: AcceuilComponent },
     { path: 'login', component: LoginComponent  },
     { path: 'dash',      component: DashboardComponent ,canActivate: [AngularFireAuthGuard],data: { authGuardPipe: redirectUnauthorizedToLogin }},
     { path: 'add-actu',      component: AddActualiteComponent ,canActivate: [AngularFireAuthGuard],data: { authGuardPipe: redirectUnauthorizedToLogin }},

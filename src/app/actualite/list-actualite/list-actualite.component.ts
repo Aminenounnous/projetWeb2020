@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Actu } from '../Actu';
 import { GetActualiteService } from './../get-actualite.service';
-import { userInfo } from 'os';
+
 @Component({
   selector: 'app-list-actualite',
   templateUrl: './list-actualite.component.html',
@@ -13,7 +13,7 @@ export class ListActualiteComponent implements OnInit {
   constructor(private getActus: GetActualiteService) { }
 
   ngOnInit() {
-    
+ 
     this.getActus.getActus().subscribe(actus => this.actus = actus);
   }
 
