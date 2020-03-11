@@ -39,9 +39,8 @@ export class UpdateActuComponent implements OnInit {
   }
   
   upActu() {
-    console.log(this.updateActuForm.value);
     this.Actus.updateActus(this.updateActuForm.value);
-    this.router.navigate(['/user-list']);
+    this.router.navigate(['/actu-list']);
     
     
 

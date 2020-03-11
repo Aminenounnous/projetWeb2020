@@ -4,5 +4,11 @@
     padding: 10px 10px;
 
   }
- 
+  .btt{
+    position: relative;
+    left: 600;
+    padding-left: 1240px;
+    padding-top: 35px;
+    padding-bottom: 10px;
+}
  

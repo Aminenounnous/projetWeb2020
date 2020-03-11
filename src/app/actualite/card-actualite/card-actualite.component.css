@@ -7,6 +7,10 @@
   }
   .mat-card-content{
     height: 250px;
+    width: 400px;
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
   }
 
   .Titre{

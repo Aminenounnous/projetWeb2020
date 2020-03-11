@@ -41,8 +41,11 @@ export class LoginComponent implements OnInit {
 
   login() {
     this.authuser.login(this.loginForm .value.email, this.loginForm.value.password).then(
-      data=> this.userEmail = data.user.email);
-    
+      data=> {
+        debugger;
+        this.userEmail = data.user.email;
+      } );
+      
    console.log(this.userEmail);
     
   }

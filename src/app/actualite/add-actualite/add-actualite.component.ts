@@ -6,6 +6,8 @@ import { Actu } from '../Actu';
 import { MatDialog } from '@angular/material';
 import { DialogMessageComponent } from 'src/app/dialog-message/dialog-message.component';
 import { isNull } from 'util';
+import { Route } from '@angular/compiler/src/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-actualite',
@@ -22,7 +24,7 @@ export class AddActualiteComponent implements OnInit {
     contenu: ['', [Validators.minLength(20), Validators.required]]
   });
 
-  constructor(private firestore: AngularFirestore, private form: FormBuilder,public dialog:MatDialog) { 
+  constructor(private firestore: AngularFirestore, private form: FormBuilder,public dialog:MatDialog,private router:Router ) { 
     this.ActuCollection = firestore.collection<Actu>('actualite');
   }
 
@@ -42,7 +44,7 @@ export class AddActualiteComponent implements OnInit {
     const actu: Actu = {title, date, contenu};
     this.ActuCollection.add(actu).then(dialog=>{
       this.opendialog(dialog);
-      
+      this.router.navigate(['/actu-list']);
 
     });
  
