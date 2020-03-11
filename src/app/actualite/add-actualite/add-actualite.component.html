@@ -5,17 +5,17 @@
   </div>
     <mat-form-field appearance="fill">
       <mat-label>Le titre</mat-label>
-      <input matInput formControlName="title" >
+      <input matInput formControlName="title"required >
     </mat-form-field>
     <br>
     <mat-form-field   appearance="fill">
         <mat-label>Contenu</mat-label>
-        <textarea matInput formControlName="contenu" ></textarea>
+        <textarea matInput formControlName="contenu" required></textarea>
       </mat-form-field>
     <br>
     <mat-form-field appearance="fill">
         <mat-label>La date</mat-label>
-        <input matInput formControlName="date">
+        <input matInput formControlName="date" required>
       </mat-form-field>
     <div class="button" ><a  mat-raised-button  [disabled]="!ActuForm.valid" (click)="AddActu()"  >Ajouter actualité</a></div>
     

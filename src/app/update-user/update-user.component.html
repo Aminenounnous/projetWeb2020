@@ -3,28 +3,28 @@
 
         <mat-form-field appearance="fill">
           <mat-label>Nom</mat-label>
-          <input matInput formControlName="nom" >
+          <input matInput formControlName="nom" required>
         </mat-form-field>
         <br>
         <mat-form-field appearance="fill">
             <mat-label>Prénom</mat-label>
-            <input matInput formControlName="prenom">
+            <input matInput formControlName="prenom" required>
           </mat-form-field>
           <br>
           <mat-form-field appearance="fill">
             <mat-label>Émail</mat-label>
-            <input matInput formControlName="email" >
+            <input matInput formControlName="email" required>
           </mat-form-field>
           <br>
           <mat-form-field appearance="fill">
             <mat-label>Numéro</mat-label>
-            <input matInput formControlName="numero" >
+            <input matInput formControlName="numero" required >
           </mat-form-field>
           <br>
 
           <mat-form-field> 
             <mat-label>rôle</mat-label>
-            <mat-select formControlName="role" [(value)]="role">
+            <mat-select formControlName="role" [(value)]="role" required>
                 <mat-option value="client"> Client</mat-option>
                 <mat-option value="employe"> Employé</mat-option>
                 <mat-option value="admin"> Admin</mat-option>
@@ -33,7 +33,7 @@
         <br>
         <mat-form-field appearance="fill">
             <mat-label>Url</mat-label>
-            <input matInput formControlName="Url" >
+            <input matInput formControlName="Url" required>
           </mat-form-field>
           <br>
     

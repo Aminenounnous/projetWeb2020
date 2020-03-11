@@ -11,11 +11,12 @@ export class UserCardComponent implements OnInit {
 
   @Input()
   public user: User;
-  public Acuser: User;
+
 
   constructor(private auth: AngularFireAuth) { }
 
   ngOnInit() {
+
 
   }
 
